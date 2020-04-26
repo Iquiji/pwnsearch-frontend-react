@@ -45,7 +45,7 @@ function formatDate(date){
 
 class SearchForm extends React.Component {
 	render() {
-		return <form>
+		return <form action="/searched">
 			<input type="text" name="s" />
 			<input type="submit" value="Submit" />
 		</form>;

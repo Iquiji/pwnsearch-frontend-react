@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import { withRouter } from 'next/router'
-import { Form } from 'react-bootstrap';
+import { Form,Button } from 'react-bootstrap';
+import SearchForm from "../components/SearchForm"
 
 export default function Home() {
 	return (
 		<>
+			<script src="https://kit.fontawesome.com/865656ea9b.js" crossOrigin="anonymous"></script>
 			<h1>
 				PwnSearch! by Iquiji
 			</h1>
@@ -13,14 +15,4 @@ export default function Home() {
 			<p></p>
 		</>
   	)
-}
-
-class SearchForm extends React.Component {
-	render() {
-		return <Form action="/searched">
-			<Form.Row>
-				<Form.Control as="input"/>
-			</Form.Row>
-		</Form>;
-	}
 }

@@ -1,0 +1,8 @@
+.submit{
+    vertical-align: middle;
+    background-color: #007bff;
+    border: 1px solid transparent;
+    border-color: #007bff;
+    border-radius: .25rem;
+    cursor: pointer;
+}
