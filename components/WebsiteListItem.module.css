@@ -1,9 +1,6 @@
 .div{
-    border: 2px solid grey;
-    border-radius: 5px;
-    border-color: cadetblue;
-    border-width: 2px;
-    background-color: darkgray;
+    border-bottom: solid #E7ECEF;
     padding-left: 3px;
-    margin-top: 10px;
+    height: 200px;
+    overflow: hidden;
 }
