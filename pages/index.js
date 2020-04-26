@@ -5,7 +5,9 @@ import SearchForm from "../components/SearchForm"
 
 export default function Home() {
 	return (
-		<>
+		<div style={{
+			"padding-left": "15px"
+		}}>
 			<script src="https://kit.fontawesome.com/865656ea9b.js" crossOrigin="anonymous"></script>
 			<h1>
 				PwnSearch! by Iquiji
@@ -13,6 +15,6 @@ export default function Home() {
 			<SearchForm></SearchForm>
 			<b></b>
 			<p></p>
-		</>
+		</div>
   	)
 }

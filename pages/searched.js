@@ -1,19 +1,22 @@
 import { useRouter } from 'next/router'
 import "isomorphic-fetch"
 import WebsiteListItem from '../components/WebsiteListItem';
+import SearchForm from "../components/SearchForm"
 
 export default function Home(props) {
     const data = JSON.parse(props.data);
     //console.log(data);
 	return (
-        <>
-            <script src="https://kit.fontawesome.com/865656ea9b.js" crossorigin="anonymous"></script>
+        <div style={{
+			"padding-left": "15px"
+		}}>
+            <script src="https://kit.fontawesome.com/865656ea9b.js" crossOrigin="anonymous"></script>
             <h1>PwnSearch! by Iquiji</h1>
             <SearchForm/>
             {data.res.map((website,i) => {
                     return <WebsiteListItem hostname={website.hostname} text={website.text} added={formatDate(website.added)} key={i} popularity={website.popularity}/>;
                 })}
-        </>
+        </div>
   	)
 }
 
@@ -41,13 +44,4 @@ function formatDate(date){
     const [{ value: mo },,{ value: da },,{ value: ye }] = dtf.formatToParts(new Date(date));
 
     return `${da}-${mo}-${ye}`;
-}
-
-class SearchForm extends React.Component {
-	render() {
-		return <form action="/searched">
-			<input type="text" name="s" />
-			<input type="submit" value="Submit" />
-		</form>;
-	}
 }
