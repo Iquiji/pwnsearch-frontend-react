@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { withRouter } from 'next/router'
+import { Form } from 'react-bootstrap';
 
 export default function Home() {
 	return (
@@ -16,9 +17,10 @@ export default function Home() {
 
 class SearchForm extends React.Component {
 	render() {
-		return <form action="/searched">
-			<input type="text" name="s" />
-			<input type="submit" value="Submit" />
-		</form>;
+		return <Form action="/searched">
+			<Form.Row>
+				<Form.Control as="input"/>
+			</Form.Row>
+		</Form>;
 	}
 }
